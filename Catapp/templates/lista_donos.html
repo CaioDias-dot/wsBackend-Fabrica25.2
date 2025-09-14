@@ -1,0 +1,19 @@
+{% extends 'layout.html'%}
+
+{% block title%}
+    Lista Donos
+{% endblock%}
+
+{% block content%}
+    <h1>Lista dos Usuários
+    </h1>
+    {% for dono in donos%}
+    <ul>
+        <li>{{dono.nome}}</li>
+        <li>{{dono.email}}</li>
+        <li>{{dono.endereco}}</li>
+        <br>
+    </ul>
+    {%endfor%}
+    <a href="{% url 'update_lista'%}">Atualizar</a>
+{%endblock%}
