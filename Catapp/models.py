@@ -6,7 +6,7 @@ class Dono(models.Model):
     endereco = models.CharField(max_length=120)
 
     def __str__(self):
-        return self.nome + "email: " + self.email
+        return self.nome + " email: " + self.email
     
 class Gato(models.Model):
     api_id = models.CharField(
