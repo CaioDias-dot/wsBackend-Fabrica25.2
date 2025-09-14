@@ -9,7 +9,7 @@ django.setup()
 import requests
 from Catapp.models import Gato, Dono
 
-#Usei get or create pois email é único e esse dono é um base(tem sempre o mesmo email)
+#Essa função deixa todos os gatos por padrão "sem dono".
 dono_inexistente, _ = Dono.objects.get_or_create(
     email="none@gmail.com",
     defaults={
