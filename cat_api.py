@@ -14,7 +14,6 @@ dono_inexistente, _ = Dono.objects.get_or_create(
     email="none@gmail.com",
     defaults={
         "nome": "Sem Dono",
-        "endereco": "none",
     }
 )
 
