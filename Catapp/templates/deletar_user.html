@@ -1,0 +1,14 @@
+{% extends 'layout.html'%}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    <h1>Deletando</h1>
+    <form method='post'>
+        {% csrf_token%}
+        <p>Tem certeza que deseja deletar {{dono.nome}}</p>
+        <button type='submit'>Sim</button>
+    </form>
+{% endblock %}

@@ -11,9 +11,10 @@
     <ul>
         <li>{{dono.nome}}</li>
         <li>{{dono.email}}</li>
-        <li>{{dono.endereco}}</li>
+        <li>{{dono.senha}}</li>
         <br>
+        <a href="{% url 'update_lista' dono.pk %}">Atualizar</a>
+        <a href="{% url 'deletar_user' dono.pk %}">Deletar</a>
     </ul>
     {%endfor%}
-    <a href="{% url 'update_lista'%}">Atualizar</a>
 {%endblock%}

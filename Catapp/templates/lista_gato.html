@@ -1,9 +1,26 @@
 {% extends 'layout2.html'%}
 
 {% block title%}
-    Home
+    Gatos
 {% endblock%}
 
 {% block content%}
-
+    <h1>Lista dos Gatos</h1>
+    {% for gato in gatos%}
+    <ul>
+        <li><img src="{{ gato.foto_gato }}" alt="Foto de um gato" style="max-width:300px;"></li>
+        <li>{{gato.raca}}</li>
+        <br>
+        <li>{{gato.descricao}}</li>
+        <li>Dono: {{gato.dono.nome}}</li>
+        <br>
+        <br>
+        <br>
+        ------------------------------------------------------------------------------------
+        <form method="post" action"{%url 'adotar_gato' gato.id%}">
+            {% csrf_token%}
+            <button type="submit">Adotar este Gato</button>
+        </form>
+    </ul>
+    {%endfor%}
 {%endblock%}
